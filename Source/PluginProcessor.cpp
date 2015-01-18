@@ -148,14 +148,7 @@ void GainPluginAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuff
     for (int i = getNumInputChannels(); i < getNumOutputChannels(); ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
 
-    // This is the place where you'd normally do the guts of your plugin's
-    // audio processing...
-    for (int channel = 0; channel < getNumInputChannels(); ++channel)
-    {
-        float* channelData = buffer.getWritePointer (channel);
-
-        // ..do something to the data...
-    }
+    buffer.applyGain (gain);
 }
 
 //==============================================================================
