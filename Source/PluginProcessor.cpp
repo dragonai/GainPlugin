@@ -138,9 +138,7 @@ void GainPluginAudioProcessor::releaseResources()
 }
 
 void GainPluginAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffer& midiMessages)
-{
-    buffer.applyGain (gain);
-    
+{    
     // In case we have more outputs than inputs, this code clears any output
     // channels that didn't contain input data, (because these aren't
     // guaranteed to be empty - they may contain garbage).
@@ -149,6 +147,8 @@ void GainPluginAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuff
     // this code if your algorithm already fills all the output channels.
     for (int i = getNumInputChannels(); i < getNumOutputChannels(); ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
+        
+    buffer.applyGain (gain);
 }
 
 //==============================================================================

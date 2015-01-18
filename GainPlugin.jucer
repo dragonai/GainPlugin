@@ -4,7 +4,7 @@
               bundleIdentifier="com.Dragonai.GainPlugin" includeBinaryInAppConfig="1"
               buildVST="1" buildVST3="0" buildAU="1" buildRTAS="0" buildAAX="0"
               pluginName="GainPlugin" pluginDesc="GainPlugin" pluginManufacturer="Dragonai"
-              pluginManufacturerCode="Manu" pluginCode="Plug" pluginChannelConfigs="{1, 1}, {2, 2}"
+              pluginManufacturerCode="Manu" pluginCode="Plug" pluginChannelConfigs="{1, 1}"
               pluginIsSynth="0" pluginWantsMidiIn="0" pluginProducesMidiOut="0"
               pluginSilenceInIsSilenceOut="0" pluginEditorRequiresKeys="0"
               pluginAUExportPrefix="GainPluginAU" pluginRTASCategory="" aaxIdentifier="com.Dragonai.GainPlugin"
