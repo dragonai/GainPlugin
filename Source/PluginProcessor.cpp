@@ -154,7 +154,7 @@ void GainPluginAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuff
 //==============================================================================
 bool GainPluginAudioProcessor::hasEditor() const
 {
-    return true; // (change this to false if you choose to not supply an editor)
+    return false; // (change this to false if you choose to not supply an editor)
 }
 
 AudioProcessorEditor* GainPluginAudioProcessor::createEditor()
