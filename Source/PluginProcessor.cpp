@@ -15,6 +15,7 @@
 //==============================================================================
 GainPluginAudioProcessor::GainPluginAudioProcessor()
 {
+    gain = 1.0f;
 }
 
 GainPluginAudioProcessor::~GainPluginAudioProcessor()
@@ -29,12 +30,12 @@ const String GainPluginAudioProcessor::getName() const
 
 int GainPluginAudioProcessor::getNumParameters()
 {
-    return 0;
+    return 1;
 }
 
 float GainPluginAudioProcessor::getParameter (int index)
 {
-    return 0.0f;
+    return gain;
 }
 
 void GainPluginAudioProcessor::setParameter (int index, float newValue)
@@ -43,12 +44,12 @@ void GainPluginAudioProcessor::setParameter (int index, float newValue)
 
 const String GainPluginAudioProcessor::getParameterName (int index)
 {
-    return String();
+    return "Gain";
 }
 
 const String GainPluginAudioProcessor::getParameterText (int index)
 {
-    return String();
+    return String (gain);
 }
 
 const String GainPluginAudioProcessor::getInputChannelName (int channelIndex) const
